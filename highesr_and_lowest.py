@@ -31,4 +31,15 @@ def high_and_low (string:str)-> str:
             max_number = int_numbers
     return f'{max_number} {min_number}'
 
-print(high_and_low(string))
+#print(high_and_low(string))
+
+def alternativa_high_and_low (string:str)-> str:
+    new_string = string.split() #убираем с списка пробелі
+    int_new_string = []
+    for numbers in new_string:
+        int_new_string.append(int(numbers))
+    max_number = max(int_new_string)
+    min_number = min(int_new_string)
+    return f'{max_number} {min_number}'
+
+print(alternativa_high_and_low(string))
